@@ -1,4 +1,4 @@
-const App = (): React.ReactNode => {
+const App = (): JSX.Element => {
   return <div className="App"></div>;
 };
 

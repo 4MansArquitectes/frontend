@@ -1,8 +1,8 @@
-# Quatre Mans Arquitectes:
+# 4 Mans Arquitectes:
 
 ## Introduction:
 
-Responsive website created for the architecture firm Quatre Mans Arquitectes to detail its activity and services for future and current clients.
+Responsive website created for the architecture firm 4 Mans Arquitectes to detail its activity and services for future and current clients.
 The website includes information about the team, the projects carried out, the services offered and contact details.
 
 ## Technologies:
