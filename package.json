@@ -12,7 +12,6 @@
   "keywords": [],
   "author": "Tutitoos, Dreapediez",
   "license": "ISC",
-  "homepage": "https://preview-beta.4mansarquitectes.com",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
