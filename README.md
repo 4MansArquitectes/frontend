@@ -1,5 +1,5 @@
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
 [![DeepScan grade](https://deepscan.io/api/teams/16639/projects/23572/branches/718248/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16639&pid=23572&bid=718248)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/718c71834d9b44bdb7af91015333144e)](https://www.codacy.com/gh/4MansArquitectes/frontend/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=4MansArquitectes/frontend&amp;utm_campaign=Badge_Grade)
