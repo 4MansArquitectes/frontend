@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3337fb20c98b42abb9890d5bda81a11b)](https://app.codacy.com/gh/4MansArquitectes/frontend?utm_source=github.com&utm_medium=referral&utm_content=4MansArquitectes/frontend&utm_campaign=Badge_Grade_Settings)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=coverage)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=4MansArquitectes_frontend&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=4MansArquitectes_frontend)
