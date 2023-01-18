@@ -1,14 +1,14 @@
-const globalStyleFonts = {
+const globalFonts = {
   mainFont: "montserrat, sans-serif",
   secondaryFont: "roboto, sans-serif",
-  mainFontSize: "1rem",
-  mediumFontSize: "20px",
-  superFontSize: "25px",
-  smallFontSize: "0.9rem",
+  fontSize: "1rem",
+  fontSizeSmall: "0.9rem",
+  fontSizeMedium: "1.25rem",
+  fontSizeLarge: "1.56rem",
   mainFontRegular: 400,
   mainFontBold: 600,
   secondaryFontRegular: 400,
   secondaryFontBold: 700,
 };
 
-export default globalStyleFonts;
+export default globalFonts;
