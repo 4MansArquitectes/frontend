@@ -1,12 +1,12 @@
+import "@fontsource/montserrat";
+import "@fontsource/roboto";
 import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./components/App";
-import "@fontsource/roboto";
-import "@fontsource/montserrat";
 import reportWebVitals from "./reportWebVitals";
 
-const container = document.getElementById("root")!;
-const root = createRoot(container);
+const documentRoot = document.getElementById("root") as HTMLElement;
+const root = createRoot(documentRoot);
 
 root.render(
   <React.StrictMode>

@@ -52,8 +52,8 @@
     ]
   },
   "dependencies": {
-    "@fontsource/montserrat": "^4.5.13",
-    "@fontsource/roboto": "^4.5.8",
+    "@fontsource/montserrat": "4.5.13",
+    "@fontsource/roboto": "4.5.8",
     "@sentry/node": "7.30.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
