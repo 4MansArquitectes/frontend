@@ -14,9 +14,9 @@ interface ExtendedRenderOptions extends RenderOptions {
 
 const ExtendedRouter = ({
   children,
-  initialEntries,
+  initialEntries = [],
 }: ExtendedPropsWithChildren): JSX.Element => {
-  return initialEntries ? (
+  return initialEntries.length > 0 ? (
     <MemoryRouter initialEntries={initialEntries}>{children}</MemoryRouter>
   ) : (
     <BrowserRouter>{children}</BrowserRouter>
@@ -30,8 +30,8 @@ const renderWithProviders = (
   const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
     return (
       <>
+        <GlobalStyled />
         <ExtendedRouter initialEntries={initialEntries}>
-          <GlobalStyled />
           {children}
         </ExtendedRouter>
       </>
