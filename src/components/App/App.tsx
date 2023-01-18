@@ -1,10 +1,13 @@
 import Layout from "../Layout/Layout";
+import Router from "../Router/Router";
 
 const App = (): JSX.Element => {
   return (
-    <div className="App">
-      <Layout></Layout>
-    </div>
+    <>
+      <Layout>
+        <Router />
+      </Layout>
+    </>
   );
 };
 
