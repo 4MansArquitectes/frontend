@@ -2,7 +2,7 @@ import { createGlobalStyle, css } from "styled-components";
 import globalColors from "./globalColors";
 import globaFonts from "./globalFonts";
 
-const GlobalStyle = css`
+const GlobalStyled = css`
   * {
     box-sizing: border-box;
     font-family: ${globaFonts.secondaryFont};
@@ -49,4 +49,4 @@ const GlobalStyle = css`
   }
 `;
 
-export default createGlobalStyle`${GlobalStyle}`;
+export default createGlobalStyle`${GlobalStyled}`;
