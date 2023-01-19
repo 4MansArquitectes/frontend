@@ -17,9 +17,7 @@ describe("Given the OurTeamCard component", () => {
         name: expectedName,
       }) as HTMLHeadingElement;
       const resultTag = screen.queryByText(expectedTag) as HTMLSpanElement;
-      const resultImage = screen.queryByAltText(
-        expectedImageAlt
-      ) as HTMLImageElement;
+      const resultImage = screen.queryByAltText(expectedImageAlt) as HTMLImageElement;
 
       expect(resultName).toBeInTheDocument();
       expect(resultTag).toBeInTheDocument();

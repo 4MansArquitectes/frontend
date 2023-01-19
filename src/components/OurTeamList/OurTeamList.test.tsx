@@ -12,14 +12,12 @@ describe("Given the OurTeamList component", () => {
 
       renderWithProviders(<OurTeamList />);
 
-      const resultName = screen.queryAllByRole("heading", {
+      const resultName: HTMLHeadingElement[] = screen.queryAllByRole("heading", {
         level: 2,
         name: expectedName,
-      }) as HTMLHeadingElement[];
-      const resultTag = screen.queryAllByText(expectedTag) as HTMLSpanElement[];
-      const resultImage = screen.queryAllByAltText(
-        expectedImageAlt
-      ) as HTMLImageElement[];
+      });
+      const resultTag: HTMLSpanElement[] = screen.queryAllByText(expectedTag);
+      const resultImage: HTMLImageElement[] = screen.queryAllByAltText(expectedImageAlt);
 
       expect(resultName[0]).toBeInTheDocument();
       expect(resultTag[0]).toBeInTheDocument();

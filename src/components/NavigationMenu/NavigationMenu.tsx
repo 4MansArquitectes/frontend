@@ -1,8 +1,8 @@
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import NavigationMenuStyled from "./NavigationMenuStyled";
-import { RxHamburgerMenu } from "react-icons/rx";
 
-const NavigationMenu = () => {
+const NavigationMenu = (): JSX.Element => {
   return (
     <NavigationMenuStyled>
       <RxHamburgerMenu className="menu" />

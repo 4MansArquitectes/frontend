@@ -26,7 +26,7 @@ const NavigationMenuStyled = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
     .menu {
       display: block;
     }
