@@ -8,7 +8,7 @@ describe("Given the OurTeamCard component", () => {
     test("Then it should show on the screen details", () => {
       const expectedName = "Susanna";
       const expectedTag = "Arquitecte";
-      const expectedImageAlt = "Image Susanna";
+      const expectedImageAlt = `${expectedTag} ${expectedName}`;
 
       renderWithProviders(<OurTeamCard {...mockTeamMember} />);
 
