@@ -12,13 +12,13 @@ const globalSizes = {
   desktopPaddingHeight: "60px",
   desktopPaddingWidth: "",
 
-  // Breakpoints
-  mobileBreakpointSmall: "360px",
-  mobileBreakpointMedium: "480px",
-  mobileBreakpointLarge: "768px",
+  // Responsives
+  mobileSmall: "360px",
+  mobileMedium: "480px",
+  mobileLarge: "768px",
 
-  desktopBreakpointSmall: "1024px",
-  desktopBreakpointMedium: "1200px",
+  desktopSmall: "1024px",
+  desktopMedium: "1200px",
 };
 
 export default globalSizes;

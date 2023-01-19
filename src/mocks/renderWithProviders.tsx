@@ -5,8 +5,8 @@ import { BrowserRouter, MemoryRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import globalColors from "../styles/globalColors";
 import globalFonts from "../styles/globalFonts";
+import globalSizes from "../styles/globalSizes";
 import GlobalStyled from "../styles/GlobalStyled";
-import globaSizes from "../styles/globaSizes";
 
 interface ExtendedPropsWithChildren extends PropsWithChildren {
   initialEntries?: InitialEntry[];
@@ -38,13 +38,11 @@ const renderWithProviders = (
           theme={{
             globalColors,
             globalFonts,
-            globaSizes,
+            globalSizes,
           }}
         >
           <GlobalStyled />
-          <ExtendedRouter initialEntries={initialEntries}>
-            {children}
-          </ExtendedRouter>
+          <ExtendedRouter initialEntries={initialEntries}>{children}</ExtendedRouter>
         </ThemeProvider>
       </>
     );

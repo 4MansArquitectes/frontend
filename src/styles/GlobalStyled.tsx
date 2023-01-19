@@ -26,10 +26,7 @@ const GlobalStyled = css`
     color: ${(props) => props.theme.globalColors.textMainColor};
     text-align: center;
     margin: 0;
-  }
-
-  a {
-    text-decoration: none;
+    cursor: default;
   }
 
   ul {
@@ -39,6 +36,18 @@ const GlobalStyled = css`
   button,
   a {
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    cursor: default;
   }
 
   h1,

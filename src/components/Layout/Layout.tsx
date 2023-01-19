@@ -1,10 +1,6 @@
 import LayoutStyled from "./LayoutStyled";
 
-const Layout = ({
-  children,
-}: {
-  children: JSX.Element | JSX.Element[] | string;
-}): JSX.Element => {
+const Layout = ({ children }: { children: JSX.Element | JSX.Element[] | string }): JSX.Element => {
   return <LayoutStyled>{children}</LayoutStyled>;
 };
 

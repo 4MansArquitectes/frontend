@@ -8,8 +8,8 @@ import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import globalColors from "./styles/globalColors";
 import globalFonts from "./styles/globalFonts";
+import globalSizes from "./styles/globalSizes";
 import GlobalStyled from "./styles/GlobalStyled";
-import globaSizes from "./styles/globaSizes";
 
 const documentRoot = document.getElementById("root") as HTMLElement;
 const root = createRoot(documentRoot);
@@ -21,7 +21,7 @@ root.render(
         theme={{
           globalColors,
           globalFonts,
-          globaSizes,
+          globalSizes,
         }}
       >
         <GlobalStyled />
