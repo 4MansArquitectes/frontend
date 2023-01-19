@@ -1,9 +1,6 @@
-import type TeamMember from "../types/teamTypes";
+import teamMembers from "../lib/teamMembers";
+import type { TeamMember, TeamMembers } from "../types/teamTypes";
 
-const mockTeamMember: TeamMember = {
-  name: "Susanna",
-  tag: "Arquitecte",
-  image: "https://i.imgur.com/4OigOzX.png",
-};
+export const mockTeamMember: TeamMember = teamMembers[0];
 
-export default mockTeamMember;
+export const mockTeamMembers: TeamMembers = teamMembers;

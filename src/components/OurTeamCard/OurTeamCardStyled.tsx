@@ -8,9 +8,10 @@ const OurTeamCardStyled = styled.article`
 
   .team {
     &__image {
-      width: 389px;
-      height: 554px;
+      width: 243px;
+      height: 346px;
       object-fit: contain;
+      margin-bottom: 10px;
     }
 
     &__name,
