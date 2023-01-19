@@ -6,9 +6,7 @@ const OurTeamList = (): JSX.Element => {
   return (
     <OurTeamListStyled>
       {teamMembers.map((member) => {
-        const findIndex = teamMembers.findIndex(
-          (memberIndex) => memberIndex.name === member.name
-        );
+        const findIndex = teamMembers.findIndex((memberIndex) => memberIndex.name === member.name);
         return <OurTeamCard key={findIndex} {...member} />;
       })}
     </OurTeamListStyled>
