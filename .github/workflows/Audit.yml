@@ -19,12 +19,6 @@ jobs:
 
       - name: EditorConfig validation
         uses: snow-actions/eclint@v1.0.1
-        with:
-          must_deny: -".github/"
-            -".husky/"
-            -"package-lock.json"
-            -"README.md"
-            -"components.md"
 
       - name: Ensure node_modules is ignored by Git
         uses: dkershner6/gitignore-parser@v1
