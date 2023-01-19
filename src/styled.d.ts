@@ -1,12 +1,12 @@
 import "styled-components";
 import globalColors from "./styles/globalColors";
 import globalFonts from "./styles/globalFonts";
-import globaSizes from "./styles/globaSizes";
+import globalSizes from "./styles/globalSizes";
 
 interface GlobalTheme {
   globalColors: typeof globalColors;
   globalFonts: typeof globalFonts;
-  globaSizes: typeof globaSizes;
+  globalSizes: typeof globalSizes;
 }
 
 declare module "styled-components" {
