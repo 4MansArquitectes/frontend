@@ -1,4 +1,4 @@
-import type TeamMember from "../types/teamTypes";
+import type { TeamMember } from "../types/teamTypes";
 
 const mockTeamMember: TeamMember = {
   name: "Susanna",
