@@ -5,9 +5,12 @@ import OurTeamListStyled from "./OurTeamListStyled";
 const OurTeamList = (): JSX.Element => {
   return (
     <OurTeamListStyled>
-      {teamMembers.map((member, index) => (
-        <OurTeamCard key={index} {...member} />
-      ))}
+      {teamMembers.map((member) => {
+        const findIndex = teamMembers.findIndex(
+          (memberIndex) => memberIndex.name === member.name
+        );
+        return <OurTeamCard key={findIndex} {...member} />;
+      })}
     </OurTeamListStyled>
   );
 };
