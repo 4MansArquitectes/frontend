@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import globalColors from "../../styles/globalColors";
-import globalFonts from "../../styles/globalFonts";
 
 const NavigationMenuStyled = styled.div`
   float: right;
@@ -15,11 +13,11 @@ const NavigationMenuStyled = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
-    font-size: ${globalFonts.fontSizeSmall};
+    font-size: ${(props) => props.theme.globalFonts.fontSizeSmall};
 
     &__link {
       padding: 0 25px 0 25px;
-      border-right: 1px solid ${globalColors.textMainColor};
+      border-right: 1px solid ${(props) => props.theme.globalColors.textMainColor};
 
       :last-child {
         border-right: none;
