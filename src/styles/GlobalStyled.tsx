@@ -1,11 +1,8 @@
 import { createGlobalStyle, css } from "styled-components";
-import globalColors from "./globalColors";
-import globaFonts from "./globalFonts";
 
 const GlobalStyled = css`
   * {
     box-sizing: border-box;
-    font-family: ${globaFonts.secondaryFont};
   }
 
   html,
@@ -14,7 +11,8 @@ const GlobalStyled = css`
     padding: 0;
     width: 100%;
     height: 100%;
-    color: ${globalColors.textMainColor};
+    font-family: ${(props) => props.theme.globalFonts.secondaryFont};
+    color: ${(props) => props.theme.globalColors.textMainColor};
   }
 
   h1,
@@ -23,12 +21,11 @@ const GlobalStyled = css`
   h4,
   h5,
   h6 {
-    font-family: ${globaFonts.mainFont};
-    color: ${globalColors.textMainColor};
-    font-weight: ${globaFonts.mainFontRegular};
+    font-family: ${(props) => props.theme.globalFonts.mainFont};
+    font-weight: ${(props) => props.theme.globalFonts.mainFontRegular};
+    color: ${(props) => props.theme.globalColors.textMainColor};
     text-align: center;
     margin: 0;
-    cursor: default;
   }
 
   a {
@@ -42,6 +39,16 @@ const GlobalStyled = css`
   button,
   a {
     cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    cursor: default;
   }
 
   input {

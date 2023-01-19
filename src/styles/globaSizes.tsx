@@ -13,7 +13,7 @@ const globalSizes = {
   desktopPaddingWidth: "",
 
   // Breakpoints
-  mobileBreakpointSmall: "320px",
+  mobileBreakpointSmall: "360px",
   mobileBreakpointMedium: "480px",
   mobileBreakpointLarge: "768px",
 
