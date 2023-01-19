@@ -2,7 +2,11 @@ import { InitialEntry } from "@remix-run/router";
 import { render, RenderOptions } from "@testing-library/react";
 import { PropsWithChildren } from "react";
 import { BrowserRouter, MemoryRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import globalColors from "../styles/globalColors";
+import globalFonts from "../styles/globalFonts";
 import GlobalStyled from "../styles/GlobalStyled";
+import globaSizes from "../styles/globaSizes";
 
 interface ExtendedPropsWithChildren extends PropsWithChildren {
   initialEntries?: InitialEntry[];
@@ -30,10 +34,18 @@ const renderWithProviders = (
   const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
     return (
       <>
-        <GlobalStyled />
-        <ExtendedRouter initialEntries={initialEntries}>
-          {children}
-        </ExtendedRouter>
+        <ThemeProvider
+          theme={{
+            globalColors,
+            globalFonts,
+            globaSizes,
+          }}
+        >
+          <GlobalStyled />
+          <ExtendedRouter initialEntries={initialEntries}>
+            {children}
+          </ExtendedRouter>
+        </ThemeProvider>
       </>
     );
   };
