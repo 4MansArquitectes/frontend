@@ -8,8 +8,8 @@ import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import globalColors from "./styles/globalColors";
 import globalFonts from "./styles/globalFonts";
-import GlobalStyled from "./styles/GlobalStyled";
 import globalSizes from "./styles/globalSizes";
+import GlobalStyled from "./styles/GlobalStyled";
 
 const documentRoot = document.getElementById("root") as HTMLElement;
 const root = createRoot(documentRoot);
