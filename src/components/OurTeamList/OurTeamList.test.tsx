@@ -1,16 +1,16 @@
 import { screen } from "@testing-library/react";
-import { mockTeamMember } from "../../mocks/mocksTeam";
+import { mockTeamMember, mockTeamMembers, mockTeamMembersExtends } from "../../mocks/mocksTeam";
 import renderWithProviders from "../../mocks/renderWithProviders";
 import OurTeamList from "./OurTeamList";
 
 describe("Given the OurTeamList component", () => {
   describe("When it is rendered", () => {
-    test("Then it should show on the screen details", () => {
+    test("Then it should show on the screen list of members 2", () => {
       const expectedName = mockTeamMember.name;
       const expectedTag = mockTeamMember.tag;
       const expectedImageAlt = `${expectedTag} ${expectedName}`;
 
-      renderWithProviders(<OurTeamList />);
+      renderWithProviders(<OurTeamList teamMembers={mockTeamMembers} />);
 
       const resultName: HTMLHeadingElement[] = screen.queryAllByRole("heading", {
         level: 2,
@@ -25,6 +25,10 @@ describe("Given the OurTeamList component", () => {
       expect(resultName[0].textContent).toEqual(expectedName);
       expect(resultTag[0].textContent).toEqual(expectedTag);
       expect(resultImage[0].alt).toEqual(expectedImageAlt);
+    });
+
+    test("Then it should show on the screen list of members 3", () => {
+      renderWithProviders(<OurTeamList teamMembers={mockTeamMembersExtends} />);
     });
   });
 });
