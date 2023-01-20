@@ -15,7 +15,7 @@ const HomePageStyled = styled.main`
   .section {
     &-head {
       &__title {
-        border-bottom: 2px solid #000000;
+        border-bottom: 1px solid ${(props) => props.theme.globalColors.textMainColor};
         margin-bottom: 40px;
         text-align: left;
         font-family: ${(props) => props.theme.globalFonts.secondaryFont};

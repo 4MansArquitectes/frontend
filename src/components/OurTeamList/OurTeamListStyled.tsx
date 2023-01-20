@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-const OurTeamListStyled = styled.div`
+interface OurTeamListStyledProps {
+  teamCount: number;
+}
+
+const OurTeamListStyled = styled.div<OurTeamListStyledProps>`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr ${(props) => props.teamCount >= 3 && "1fr"};
   grid-gap: 112px;
 
   @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {

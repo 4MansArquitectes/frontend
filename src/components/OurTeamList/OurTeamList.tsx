@@ -4,7 +4,7 @@ import OurTeamListStyled from "./OurTeamListStyled";
 
 const OurTeamList = (): JSX.Element => {
   return (
-    <OurTeamListStyled>
+    <OurTeamListStyled teamCount={teamMembers.length}>
       {teamMembers.map((member) => {
         const findIndex = teamMembers.findIndex((memberIndex) => memberIndex.name === member.name);
         return <OurTeamCard key={findIndex} {...member} />;
