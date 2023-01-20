@@ -6,11 +6,8 @@ const globalSizes = {
 
   headerHeight: "60px",
 
-  mobilePaddingHeight: "30px",
-  mobilePaddingWidth: "",
-
-  desktopPaddingHeight: "60px",
-  desktopPaddingWidth: "",
+  mobileMargin: "10px 30px 0 30px",
+  desktopMargin: "10px 60px 0 60px",
 
   // Responsives
   mobileSmall: "360px",
