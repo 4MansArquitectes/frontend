@@ -17,8 +17,7 @@ const NavigationMenuStyled = styled.div`
 
     &__link {
       padding: 0 25px 0 25px;
-      border-right: 1px solid
-        ${(props) => props.theme.globalColors.textMainColor};
+      border-right: 1px solid ${(props) => props.theme.globalColors.textMainColor};
 
       :last-child {
         border-right: none;
@@ -27,7 +26,7 @@ const NavigationMenuStyled = styled.div`
     }
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileSmall}) {
     .menu {
       display: block;
     }
