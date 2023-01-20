@@ -17,6 +17,7 @@ const HomePageStyled = styled.main`
       &__title {
         border-bottom: 1px solid ${(props) => props.theme.globalColors.textMainColor};
         margin-bottom: 40px;
+        padding-bottom: 5px;
         text-align: left;
         font-family: ${(props) => props.theme.globalFonts.secondaryFont};
         font-weight: ${(props) => props.theme.globalFonts.secondaryFontRegular};
@@ -32,6 +33,17 @@ const HomePageStyled = styled.main`
 
       @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
         justify-content: center;
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex-wrap: wrap;
+
+      & > p {
+        text-align: start;
       }
     }
   }
