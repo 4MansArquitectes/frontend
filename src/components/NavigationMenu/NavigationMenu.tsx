@@ -1,5 +1,6 @@
 import { RxHamburgerMenu } from "react-icons/rx";
 import { Link } from "react-router-dom";
+import routes from "../../lib/routes";
 import NavigationMenuStyled from "./NavigationMenuStyled";
 
 const NavigationMenu = (): JSX.Element => {
@@ -7,21 +8,11 @@ const NavigationMenu = (): JSX.Element => {
     <NavigationMenuStyled>
       <RxHamburgerMenu className="menu" />
       <ul className="navigation">
-        <li className="navigation__link">
-          <Link to="/">Inicio</Link>
-        </li>
-        <li className="navigation__link">
-          <Link to="/nosotros">Nosotros</Link>
-        </li>
-        <li className="navigation__link">
-          <Link to="/proyectos">Proyectos</Link>
-        </li>
-        <li className="navigation__link">
-          <Link to="/servicios">Servicios</Link>
-        </li>
-        <li className="navigation__link">
-          <Link to="/contacto">Contacto</Link>
-        </li>
+        {routes.map((route) => (
+          <li key={route.index} className="navigation__link">
+            <Link to={route.path}>{route.name}</Link>
+          </li>
+        ))}
       </ul>
     </NavigationMenuStyled>
   );

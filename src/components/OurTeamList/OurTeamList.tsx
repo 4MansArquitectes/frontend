@@ -9,10 +9,9 @@ interface OurTeamListProps {
 const OurTeamList = ({ teamMembers }: OurTeamListProps): JSX.Element => {
   return (
     <OurTeamListStyled teamCount={teamMembers.length}>
-      {teamMembers.map((member) => {
-        const findIndex = teamMembers.findIndex((memberIndex) => memberIndex.name === member.name);
-        return <OurTeamCard key={findIndex} {...member} />;
-      })}
+      {teamMembers.map((member) => (
+        <OurTeamCard key={member.index} {...member} />
+      ))}
     </OurTeamListStyled>
   );
 };
