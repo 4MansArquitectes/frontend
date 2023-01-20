@@ -16,10 +16,7 @@ interface ExtendedRenderOptions extends RenderOptions {
   initialEntries?: InitialEntry[];
 }
 
-const ExtendedRouter = ({
-  children,
-  initialEntries = [],
-}: ExtendedPropsWithChildren): JSX.Element => {
+const ExtendedRouter = ({ children, initialEntries = [] }: ExtendedPropsWithChildren): JSX.Element => {
   return initialEntries.length > 0 ? (
     <MemoryRouter initialEntries={initialEntries}>{children}</MemoryRouter>
   ) : (
@@ -27,10 +24,7 @@ const ExtendedRouter = ({
   );
 };
 
-const renderWithProviders = (
-  ui: React.ReactElement,
-  { initialEntries, ...renderOptions }: ExtendedRenderOptions = {}
-) => {
+const renderWithProviders = (ui: React.ReactElement, { initialEntries, ...renderOptions }: ExtendedRenderOptions = {}) => {
   const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
     return (
       <>

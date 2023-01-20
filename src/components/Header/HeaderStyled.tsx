@@ -9,7 +9,8 @@ const HeaderStyled = styled.div`
 
   .logo {
     width: 250px;
-    @media only screen and (max-width: 360px) {
+
+    @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileSmall}) {
       width: 200px;
     }
   }
