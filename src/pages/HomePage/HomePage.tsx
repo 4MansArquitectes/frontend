@@ -1,4 +1,5 @@
 import OurTeamList from "../../components/OurTeamList/OurTeamList";
+import teamMembers from "../../lib/teamMembers";
 import HomePageStyled from "./HomePageStyled";
 
 const HomePage = (): JSX.Element => {
@@ -9,7 +10,7 @@ const HomePage = (): JSX.Element => {
           <h2 className="section-head__title">Nuestro Equipo</h2>
         </div>
         <div className="section-container">
-          <OurTeamList />
+          <OurTeamList teamMembers={teamMembers} />
         </div>
       </section>
       <section className="section-projects">

@@ -4,7 +4,7 @@ import HeaderStyled from "./HeaderStyled";
 const Header = (): JSX.Element => {
   return (
     <HeaderStyled>
-      <img className="logo" src="/assets/logo.svg" alt="Logotipo Quatre mans arquitectes" />
+      <img className="logo" src="/assets/images/logo.svg" alt="Logotipo Quatre mans arquitectes" />
       <NavigationMenu />
     </HeaderStyled>
   );

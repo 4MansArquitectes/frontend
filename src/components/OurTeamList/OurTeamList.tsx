@@ -1,10 +1,14 @@
-import teamMembers from "../../lib/teamMembers";
+import type { TeamMembers } from "../../types/teamTypes";
 import OurTeamCard from "../OurTeamCard/OurTeamCard";
 import OurTeamListStyled from "./OurTeamListStyled";
 
-const OurTeamList = (): JSX.Element => {
+interface OurTeamListProps {
+  teamMembers: TeamMembers;
+}
+
+const OurTeamList = ({ teamMembers }: OurTeamListProps): JSX.Element => {
   return (
-    <OurTeamListStyled>
+    <OurTeamListStyled teamCount={teamMembers.length}>
       {teamMembers.map((member) => {
         const findIndex = teamMembers.findIndex((memberIndex) => memberIndex.name === member.name);
         return <OurTeamCard key={findIndex} {...member} />;

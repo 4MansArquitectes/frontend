@@ -7,7 +7,7 @@ const teamMembers: TeamMembers = [
     image: "https://i.imgur.com/4OigOzX.png",
   },
   {
-    name: "Bego Rus",
+    name: "Begoña Rus Luis",
     tag: "Arquitecta",
     image: "https://i.imgur.com/4OigOzX.png",
   },
