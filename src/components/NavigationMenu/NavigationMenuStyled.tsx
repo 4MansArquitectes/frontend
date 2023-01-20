@@ -8,6 +8,7 @@ const NavigationMenuStyled = styled.div`
     font-size: 2.5rem;
     padding-top: 15px;
   }
+
   .navigation {
     display: flex;
     flex-direction: row;
@@ -26,7 +27,7 @@ const NavigationMenuStyled = styled.div`
     }
   }
 
-  @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileSmall}) {
+  @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {
     .menu {
       display: block;
     }
