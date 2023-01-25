@@ -22,25 +22,36 @@ const HomePageStyled = styled.main`
         font-family: ${(props) => props.theme.globalFonts.secondaryFont};
         font-weight: ${(props) => props.theme.globalFonts.secondaryFontRegular};
         font-size: ${(props) => props.theme.globalFonts.fontSizeExtraLarge};
+
+        @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
+          font-size: ${(props) => props.theme.globalFonts.fontSizeMediumLarge};
+        }
       }
     }
 
     &-container {
       display: flex;
       justify-content: flex-end;
-      flex-wrap: nowrap;
-      flex-direction: row;
 
-      @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
-        justify-content: center;
+      &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 75%;
+
+        @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
+          width: 100%;
+          align-items: center;
+        }
       }
     }
 
-    &-description {
+    &__description {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       flex-wrap: wrap;
+      width: 75%;
 
       & > p {
         text-align: start;

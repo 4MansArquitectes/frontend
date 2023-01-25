@@ -13,6 +13,12 @@ const teamMembers: TeamMembers = [
     tag: "Arquitecta",
     image: "https://i.imgur.com/4OigOzX.png",
   },
+  {
+    index: 2,
+    name: "Emilia Clarke",
+    tag: "Arquitecta",
+    image: "https://i.imgur.com/4OigOzX.png",
+  },
 ];
 
 export default teamMembers;
