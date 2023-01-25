@@ -7,7 +7,8 @@ const HeaderStyled = styled.div`
   width: 100%;
 
   .logo {
-    width: 250px;
+    width: 200px;
+    margin-top: 10px;
 
     @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileSmall}) {
       width: 200px;
