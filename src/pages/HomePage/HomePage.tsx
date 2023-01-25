@@ -10,16 +10,16 @@ const HomePage = (): JSX.Element => {
           <h2 className="section-head__title">Nuestro Equipo</h2>
         </div>
         <div className="section-container">
-          <OurTeamList teamMembers={teamMembers} />
-        </div>
-        <div className="section-description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
-            magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-            nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-            consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-            praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-          </p>
+          <div className="section-container__box">
+            <OurTeamList teamMembers={teamMembers} />
+            <p className="section-container__description">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+              magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
+              nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+              molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
+              blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+          </div>
         </div>
       </section>
       <section className="section-projects">

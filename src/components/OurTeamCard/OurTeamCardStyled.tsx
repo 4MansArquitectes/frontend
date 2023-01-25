@@ -20,13 +20,13 @@ const OurTeamCardStyled = styled.article`
     }
 
     &__name {
-      font-size: ${(props) => props.theme.globalFonts.fontSizeLarge};
+      font-size: ${(props) => props.theme.globalFonts.fontSizeSmall};
       font-weight: ${(props) => props.theme.globalFonts.secondaryFontBold};
     }
 
     &__tag {
       color: ${(props) => props.theme.globalColors.textMainLightColor};
-      font-size: ${(props) => props.theme.globalFonts.fontSizeMedium};
+      font-size: ${(props) => props.theme.globalFonts.fontSizeSmall};
       font-weight: ${(props) => props.theme.globalFonts.secondaryFontRegular};
     }
   }
