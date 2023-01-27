@@ -26,25 +26,25 @@ const HomePage = (): JSX.Element => {
         <div className="section-head">
           <h2 className="section-head__title">Proyectos</h2>
         </div>
-        <div className="section-container"></div>
+        <div className="section-container" />
       </section>
       <section className="section-services">
         <div className="section-head">
           <h2 className="section-head__title">Servicios</h2>
         </div>
-        <div className="section-container"></div>
+        <div className="section-container" />
       </section>
       <section className="section-proccess">
         <div className="section-head">
           <h2 className="section-head__title">Proceso</h2>
         </div>
-        <div className="section-container"></div>
+        <div className="section-container" />
       </section>
       <section className="section-opinions">
         <div className="section-head">
           <h2 className="section-head__title">Opiniones</h2>
         </div>
-        <div className="section-container"></div>
+        <div className="section-container" />
       </section>
     </HomePageStyled>
   );

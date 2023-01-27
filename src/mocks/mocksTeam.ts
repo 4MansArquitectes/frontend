@@ -8,7 +8,7 @@ export const mockTeamMembers: TeamMembers = teamMembers;
 export const mockTeamMembersExtends: TeamMembers = [
   ...teamMembers,
   {
-    index: 2,
+    index: 3,
     name: "Mock Team",
     tag: "Mock Team",
     image: "image.png",
