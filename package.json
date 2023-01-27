@@ -18,9 +18,11 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "prepare": "husky install",
+    "lint:rome": "rome check src",
     "lint:eslint": "eslint --ignore-path .gitignore . --max-warnings 0",
     "lint:staged": "lint-staged",
-    "lint": "npm run lint:eslint && npm run lint:staged"
+    "lint": "npm run lint:rome && npm run lint:eslint && npm run lint:staged",
+    "lint:install": "npm install -g rome eslint lint-staged"
   },
   "eslintConfig": {
     "extends": [
