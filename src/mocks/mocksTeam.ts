@@ -6,11 +6,11 @@ export const mockTeamMember: TeamMember = teamMembers[0];
 export const mockTeamMembers: TeamMembers = teamMembers;
 
 export const mockTeamMembersExtends: TeamMembers = [
-  ...teamMembers,
-  {
-    index: 2,
-    name: "Mock Team",
-    tag: "Mock Team",
-    image: "image.png",
-  },
+	...teamMembers,
+	{
+		index: 3,
+		name: "Mock Team",
+		tag: "Mock Team",
+		image: "image.png",
+	},
 ];
