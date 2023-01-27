@@ -12,6 +12,16 @@ const OurTeamCardStyled = styled.article`
       height: 346px;
       object-fit: contain;
       margin-bottom: 10px;
+
+      @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
+        width: 182px;
+        height: 259px;
+      }
+
+      @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileMedium}) {
+        width: 126px;
+        height: 180px;
+      }
     }
 
     &__name,
@@ -22,6 +32,10 @@ const OurTeamCardStyled = styled.article`
     &__name {
       font-size: ${(props) => props.theme.globalFonts.fontSizeSmall};
       font-weight: ${(props) => props.theme.globalFonts.secondaryFontBold};
+
+      @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileMedium}) {
+        font-size: 0.8rem;
+      }
     }
 
     &__tag {

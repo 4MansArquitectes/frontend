@@ -13,8 +13,8 @@ const OurTeamListStyled = styled.div<OurTeamListStyledProps>`
     grid-template-columns: 1fr 1fr;
   }
 
-  @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
-    grid-template-columns: 1fr;
+  @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileMedium}) {
+    grid-gap: 30px;
   }
 `;
 
