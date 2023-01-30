@@ -57,7 +57,11 @@ const HomePageStyled = styled.main<HomePageStyledProps>`
         flex-direction: column;
         align-items: flex-end;
         flex-wrap: wrap;
-        width: ${(props) => props.divOurTeam.width}px;
+        width: ${(props) => `${props.divOurTeam.width}px`};
+
+        @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {
+          width: 100%;
+        }
 
         & > p {
           text-align: start;
