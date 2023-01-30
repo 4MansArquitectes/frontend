@@ -66,6 +66,7 @@ describe("Given the HomePage component", () => {
 
     afterEach(() => {
       global.window = originalWindow;
+      global.window.removeEventListener("resize", mockResize);
     });
 
     test("Then it should resize", () => {
@@ -75,6 +76,7 @@ describe("Given the HomePage component", () => {
       global.window.innerHeight = 400;
 
       act(() => {
+        global.dispatchEvent(new Event("resize"));
         global.dispatchEvent(new Event("resize"));
       });
 

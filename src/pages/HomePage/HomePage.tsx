@@ -10,12 +10,13 @@ const HomePage = (): JSX.Element => {
   useEffect(() => {
     const updateDivOurTeam = () => {
       setDivOurTeam({
-        width: divOurTeamRef.current?.offsetWidth ?? 0,
-        height: divOurTeamRef.current?.offsetHeight ?? 0,
+        width: divOurTeamRef.current!.offsetWidth,
+        height: divOurTeamRef.current!.offsetHeight,
       });
     };
 
     window.addEventListener("resize", updateDivOurTeam);
+    return () => window.removeEventListener("resize", updateDivOurTeam);
   }, [divOurTeamRef]);
 
   return (
