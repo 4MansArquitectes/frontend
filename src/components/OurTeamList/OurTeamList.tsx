@@ -3,12 +3,13 @@ import OurTeamCard from "../OurTeamCard/OurTeamCard";
 import OurTeamListStyled from "./OurTeamListStyled";
 
 interface OurTeamListProps {
+  ref?: React.RefObject<HTMLDivElement>;
   teamMembers: TeamMembers;
 }
 
-const OurTeamList = ({ teamMembers }: OurTeamListProps): JSX.Element => {
+const OurTeamList = ({ ref, teamMembers }: OurTeamListProps): JSX.Element => {
   return (
-    <OurTeamListStyled teamCount={teamMembers.length}>
+    <OurTeamListStyled ref={ref} teamCount={teamMembers.length}>
       {teamMembers.map((member) => (
         <OurTeamCard key={member.index} {...member} />
       ))}

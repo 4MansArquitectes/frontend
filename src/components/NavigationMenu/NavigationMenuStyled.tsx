@@ -20,6 +20,10 @@ const NavigationMenuStyled = styled.div`
       padding: 0 25px 0 25px;
       border-right: 1px solid ${(props) => props.theme.globalColors.textMainColor};
 
+      :hover {
+        font-weight: 800;
+      }
+
       :last-child {
         border-right: none;
         padding-right: 0;
