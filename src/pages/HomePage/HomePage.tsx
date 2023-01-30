@@ -1,17 +1,35 @@
 import OurTeamList from "../../components/OurTeamList/OurTeamList";
 import teamMembers from "../../lib/teamMembers";
 import HomePageStyled from "./HomePageStyled";
+import { createRef, useEffect, useState } from "react";
 
 const HomePage = (): JSX.Element => {
+  const divOurTeamRef = createRef<HTMLDivElement>();
+  const [divOurTeam, setDivOurTeam] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const updateDivOurTeam = () => {
+      setDivOurTeam({
+        width: divOurTeamRef.current!.offsetWidth,
+        height: divOurTeamRef.current!.offsetHeight,
+      });
+    };
+
+    window.addEventListener("resize", updateDivOurTeam);
+    return () => window.removeEventListener("resize", updateDivOurTeam);
+  }, [divOurTeamRef]);
+
   return (
-    <HomePageStyled>
+    <HomePageStyled divOurTeam={divOurTeam}>
       <section className="section-ourteam">
         <div className="section-head">
           <h2 className="section-head__title">Nuestro Equipo</h2>
         </div>
         <div className="section-container">
           <div className="section-container__box">
-            <OurTeamList teamMembers={teamMembers} />
+            <div ref={divOurTeamRef}>
+              <OurTeamList teamMembers={teamMembers} />
+            </div>
             <p className="section-container__description">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
               magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis

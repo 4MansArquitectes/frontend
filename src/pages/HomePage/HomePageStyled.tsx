@@ -1,6 +1,13 @@
 import styled from "styled-components";
 
-const HomePageStyled = styled.main`
+interface HomePageStyledProps {
+  divOurTeam: {
+    width: number;
+    height: number;
+  };
+}
+
+const HomePageStyled = styled.main<HomePageStyledProps>`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -9,7 +16,7 @@ const HomePageStyled = styled.main`
 
   section {
     width: 100%;
-    height: 100%; // 900px
+    height: 100%;
   }
 
   .section {
@@ -44,17 +51,17 @@ const HomePageStyled = styled.main`
           align-items: center;
         }
       }
-    }
 
-    &__description {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      flex-wrap: wrap;
-      width: 75%;
+      &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        width: ${(props) => props.divOurTeam.width}px;
 
-      & > p {
-        text-align: start;
+        & > p {
+          text-align: start;
+        }
       }
     }
   }

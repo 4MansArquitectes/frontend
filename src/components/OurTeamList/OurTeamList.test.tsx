@@ -1,7 +1,7 @@
-import { screen } from "@testing-library/react";
 import { mockTeamMember, mockTeamMembers, mockTeamMembersExtends } from "../../mocks/mocksTeam";
 import renderWithProviders from "../../mocks/renderWithProviders";
 import OurTeamList from "./OurTeamList";
+import { screen } from "@testing-library/react";
 
 describe("Given the OurTeamList component", () => {
   describe("When it is rendered", () => {
