@@ -36,8 +36,8 @@ const HomePageStyled = styled.main`
       &__box {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        width: 75%;
+        flex-wrap: nowrap;
+        align-items: flex-end;
 
         @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
           width: 100%;
