@@ -2,8 +2,33 @@ import renderWithProviders from "../../mocks/renderWithProviders";
 import HomePage from "./HomePage";
 import { act, screen } from "@testing-library/react";
 
+let originalWindow: Window & typeof globalThis;
+const mockResize = jest.fn();
+
+const loadWindow = (width: number, height: number) => () => {
+  originalWindow = global.window;
+  global.window = { ...originalWindow };
+  Object.defineProperty(global.window, "innerWidth", {
+    configurable: true,
+    value: width,
+  });
+  Object.defineProperty(global.window, "innerHeight", {
+    configurable: true,
+    value: height,
+  });
+  global.window.addEventListener("resize", mockResize);
+};
+
 describe("Given the HomePage component", () => {
   describe("When it is rendered", () => {
+    beforeEach(loadWindow(1000, 800));
+
+    afterEach(() => {
+      global.window = originalWindow;
+      global.window.removeEventListener("resize", mockResize);
+      mockResize.mockClear();
+    });
+
     test("Then it should show on the screen the title of each section", () => {
       const expectedOurTeamSectionTitle = "Nuestro Equipo";
       const expectedProjectsSectionTitle = "Proyectos";
@@ -46,29 +71,6 @@ describe("Given the HomePage component", () => {
       expect(resultOpinionsSectionTitle.textContent).toEqual(expectedOpinionsSectionTitle);
     });
 
-    let originalWindow: Window & typeof globalThis;
-
-    const mockResize = jest.fn();
-
-    beforeEach(() => {
-      originalWindow = global.window;
-      global.window = { ...originalWindow };
-      Object.defineProperty(global.window, "innerWidth", {
-        configurable: true,
-        value: 1000,
-      });
-      Object.defineProperty(global.window, "innerHeight", {
-        configurable: true,
-        value: 800,
-      });
-      global.window.addEventListener("resize", mockResize);
-    });
-
-    afterEach(() => {
-      global.window = originalWindow;
-      global.window.removeEventListener("resize", mockResize);
-    });
-
     test("Then it should resize", () => {
       renderWithProviders(<HomePage />);
 
@@ -76,7 +78,6 @@ describe("Given the HomePage component", () => {
       global.window.innerHeight = 400;
 
       act(() => {
-        global.dispatchEvent(new Event("resize"));
         global.dispatchEvent(new Event("resize"));
       });
 

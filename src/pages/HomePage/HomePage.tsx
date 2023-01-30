@@ -27,7 +27,7 @@ const HomePage = (): JSX.Element => {
         </div>
         <div className="section-container">
           <div className="section-container__box">
-            <div ref={divOurTeamRef}>
+            <div ref={divOurTeamRef} data-testid="ok">
               <OurTeamList teamMembers={teamMembers} />
             </div>
             <p className="section-container__description">
