@@ -16,7 +16,6 @@ const HomePage = (): JSX.Element => {
     };
 
     window.addEventListener("resize", updateDivOurTeam);
-    return () => window.removeEventListener("resize", updateDivOurTeam);
   }, [divOurTeamRef]);
 
   return (
