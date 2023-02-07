@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import { screen } from "@testing-library/react";
 
 describe("Given a Footer component", () => {
-  describe("When it's rendered with a logo with alternative text 'Logotipo Quatre mans arquitectes' and icons alternative text 'Logotipo Instagram' and 'Logotipo Linkedin'", () => {
+  describe("When it's rendered with an svg image with the alternative text 'Logotipo Quatre mans arquitectes'", () => {
     test("Then it should show the Header image at the screen", () => {
       renderWithProviders(<Footer />);
 
