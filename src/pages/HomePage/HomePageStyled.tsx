@@ -59,9 +59,9 @@ const HomePageStyled = styled.main<HomePageStyledProps>`
         flex-wrap: wrap;
         width: ${(props) => (props.divOurTeam.width > 0 ? `${props.divOurTeam.width}px` : "100%")};
 
-        @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {
+        /* @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {
           width: 100%;
-        }
+        } */
 
         & > p {
           text-align: start;
