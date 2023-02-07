@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const NavigationMenuStyled = styled.div`
+const NavigationMenuStyled = styled.nav`
   float: right;
 
   .menu {
@@ -41,4 +41,5 @@ const NavigationMenuStyled = styled.div`
     }
   }
 `;
+
 export default NavigationMenuStyled;
