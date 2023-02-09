@@ -1,6 +1,6 @@
 import type { Routes } from "../types/routesTypes";
 
-const routes: Routes = [
+export const routesHeader: Routes = [
   { index: 0, name: "Inicio", path: "/" },
   { index: 1, name: "Nosotros", path: "/nosotros" },
   { index: 2, name: "Proyectos", path: "/proyectos" },
@@ -8,4 +8,8 @@ const routes: Routes = [
   { index: 4, name: "Contacto", path: "/contacto" },
 ];
 
-export default routes;
+export const routesFooter: Routes = [
+  { index: 0, name: "Política de privacidad", path: "/politica-de-privacidad" },
+  { index: 1, name: "Política de cookies", path: "/politica-de-cookies" },
+  { index: 2, name: "Aviso legal", path: "/aviso-legal" },
+];

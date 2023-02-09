@@ -1,8 +1,8 @@
+import { routesHeader } from "../../lib/routes";
+import NavigationMenuStyled from "./NavigationMenuStyled";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
-import routes from "../../lib/routes";
-import NavigationMenuStyled from "./NavigationMenuStyled";
 
 const NavigationMenu = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const NavigationMenu = (): JSX.Element => {
           <RxHamburgerMenu className="menu" />
         </button>
         <ul className={`mobile-navigation ${isOpen ? "show" : "hidden"}`}>
-          {routes.map((route) => (
+          {routesHeader.map((route) => (
             <li key={route.index} className="mobile-navigation__link">
               <Link to={route.path} onClick={toggleMenu}>
                 {route.name}
@@ -30,7 +30,7 @@ const NavigationMenu = (): JSX.Element => {
 
       <nav className="desktop">
         <ul className="desktop-navigation">
-          {routes.map((route) => (
+          {routesHeader.map((route) => (
             <li key={route.index} className="desktop-navigation__link">
               <Link to={route.path}>{route.name}</Link>
             </li>
