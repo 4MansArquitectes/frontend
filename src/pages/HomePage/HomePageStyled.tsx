@@ -14,6 +14,25 @@ const HomePageStyled = styled.main<HomePageStyledProps>`
   align-items: center;
   margin-top: 40px;
 
+  .cover {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin: 10px;
+    position: relative;
+
+    &__img {
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      top: -100%;
+      bottom: -100%;
+      margin: auto;
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+
   section {
     width: 100%;
     height: 100%;
