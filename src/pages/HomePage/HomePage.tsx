@@ -21,6 +21,9 @@ const HomePage = (): JSX.Element => {
 
   return (
     <HomePageStyled divOurTeam={divOurTeam}>
+      <div className="cover">
+        <img className="cover__img" src="/assets/images/cabecera.jpg" alt="Cabecera" />
+      </div>
       <section className="section-ourteam">
         <div className="section-head">
           <h2 className="section-head__title">Nuestro Equipo</h2>
