@@ -6,8 +6,9 @@ const LayoutStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
 
-  @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
+  @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {
     margin: ${(props) => props.theme.globalSizes.mobileMargin};
   }
 `;
