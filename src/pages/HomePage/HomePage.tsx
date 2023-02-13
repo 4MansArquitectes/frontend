@@ -1,26 +1,10 @@
 import OurTeamList from "../../components/OurTeamList/OurTeamList";
 import teamMembers from "../../lib/teamMembers";
 import HomePageStyled from "./HomePageStyled";
-import { createRef, useEffect, useState } from "react";
 
 const HomePage = (): JSX.Element => {
-  const divOurTeamRef = createRef<HTMLDivElement>();
-  const [divOurTeam, setDivOurTeam] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    const updateDivOurTeam = () => {
-      setDivOurTeam({
-        width: divOurTeamRef.current!.offsetWidth,
-        height: divOurTeamRef.current!.offsetHeight,
-      });
-    };
-
-    window.addEventListener("resize", updateDivOurTeam);
-    return () => window.removeEventListener("resize", updateDivOurTeam);
-  }, [divOurTeamRef]);
-
   return (
-    <HomePageStyled divOurTeam={divOurTeam}>
+    <HomePageStyled>
       <div className="cover">
         <img className="cover__img" src="/assets/images/cabecera.jpg" alt="Cabecera" />
       </div>
@@ -30,9 +14,7 @@ const HomePage = (): JSX.Element => {
         </div>
         <div className="section-container">
           <div className="section-container__box">
-            <div ref={divOurTeamRef} data-testid="ok">
-              <OurTeamList teamMembers={teamMembers} />
-            </div>
+            <OurTeamList teamMembers={teamMembers} />
             <p className="section-container__description">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore
               magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis

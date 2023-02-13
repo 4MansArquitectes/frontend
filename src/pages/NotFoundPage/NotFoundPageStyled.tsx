@@ -8,20 +8,20 @@ const NotFoundPageStyled = styled.main`
   margin-top: 40px;
 
   .code {
-    font-size: 12.5rem;
+    font-size: 7rem;
 
     @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
-      font-size: 10rem;
+      font-size: 6rem;
     }
   }
 
   .title {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
 
     @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 
@@ -35,7 +35,7 @@ const NotFoundPageStyled = styled.main`
   }
 
   .link {
-    padding: 20px 50px;
+    padding: 10px 30px;
     border: 1px solid #323232;
   }
 `;

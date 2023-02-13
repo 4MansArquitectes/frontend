@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-interface HomePageStyledProps {
-  divOurTeam: {
-    width: number;
-    height: number;
-  };
-}
-
-const HomePageStyled = styled.main<HomePageStyledProps>`
+const HomePageStyled = styled.main`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -63,7 +56,7 @@ const HomePageStyled = styled.main<HomePageStyledProps>`
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        align-items: flex-end;
+        align-items: center;
 
         @media only screen and (max-width: ${(props) => props.theme.globalSizes.mobileLarge}) {
           width: 100%;
@@ -76,11 +69,7 @@ const HomePageStyled = styled.main<HomePageStyledProps>`
         flex-direction: column;
         align-items: flex-end;
         flex-wrap: wrap;
-        width: ${(props) => (props.divOurTeam.width > 0 ? `${props.divOurTeam.width}px` : "100%")};
-
-        /* @media only screen and (max-width: ${(props) => props.theme.globalSizes.desktopSmall}) {
-          width: 100%;
-        } */
+        width: 100%;
 
         & > p {
           text-align: start;
