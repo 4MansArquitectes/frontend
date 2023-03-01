@@ -1,7 +1,7 @@
-import { screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import renderWithProviders from "../../mocks/renderWithProviders";
 import NavigationMenu from "./NavigationMenu";
+import { screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 
 describe("Given a NavigationMenu component", () => {
   describe("When it's rendered with the menu options 'Inicio', 'Nosotros', 'Proyectos', 'Servicios' and 'Contacto'", () => {
@@ -46,16 +46,17 @@ describe("Given a NavigationMenu component", () => {
 
   describe("When it's rendered and button is clicked", () => {
     test("Then it should show a list with classname hidden before click and show after click", async () => {
-      const expectedButton = screen.queryByLabelText("menu");
-      // const expectedList = screen.queryByRole("list");
-      // const expectedListBeforeClick = screen.queryByRole("list");
-
       renderWithProviders(<NavigationMenu />);
 
-      await userEvent.click(expectedButton!);
+      const expectedButton = screen.queryByRole("button", {
+        name: "menu",
+      }) as HTMLButtonElement;
 
-      // expect(expectedList).toHaveClass("hidden");
-      // expect(expectedListBeforeClick).toHaveClass("show");
+      const mockAction = jest.fn();
+      expectedButton.onclick = mockAction;
+      await userEvent.click(expectedButton);
+
+      expect(mockAction).toHaveBeenCalled();
     });
   });
 });

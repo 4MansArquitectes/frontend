@@ -16,29 +16,27 @@ interface ExtendedRenderOptions extends RenderOptions {
   initialEntries?: InitialEntry[];
 }
 
-const ExtendedRouter = ({ children, initialEntries = [] }: ExtendedPropsWithChildren): JSX.Element => {
-  return initialEntries.length > 0 ? (
+const ExtendedRouter = ({ children, initialEntries = [] }: ExtendedPropsWithChildren): JSX.Element =>
+  initialEntries.length > 0 ? (
     <MemoryRouter initialEntries={initialEntries}>{children}</MemoryRouter>
   ) : (
     <BrowserRouter>{children}</BrowserRouter>
   );
-};
 
 const renderWithProviders = (ui: React.ReactElement, { initialEntries, ...renderOptions }: ExtendedRenderOptions = {}) => {
-  const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => {
-    return (
-      <ThemeProvider
-        theme={{
-          globalColors,
-          globalFonts,
-          globalSizes,
-        }}
-      >
-        <GlobalStyled />
-        <ExtendedRouter initialEntries={initialEntries}>{children}</ExtendedRouter>
-      </ThemeProvider>
-    );
-  };
+  const Wrapper = ({ children }: PropsWithChildren<{}>): JSX.Element => (
+    <ThemeProvider
+      theme={{
+        globalColors,
+        globalFonts,
+        globalSizes,
+      }}
+    >
+      <GlobalStyled />
+      <ExtendedRouter initialEntries={initialEntries}>{children}</ExtendedRouter>
+    </ThemeProvider>
+  );
+
   return { ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
 };
 
