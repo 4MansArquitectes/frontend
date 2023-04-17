@@ -7,6 +7,10 @@ const HomePageStyled = styled.main`
   align-items: center;
   margin-top: 40px;
 
+  .underline {
+    text-decoration: underline;
+  }
+
   .cover {
     width: 100%;
     height: 250px;
@@ -16,13 +20,9 @@ const HomePageStyled = styled.main`
 
     &__img {
       position: absolute;
-      left: -100%;
-      right: -100%;
-      top: -100%;
-      bottom: -100%;
-      margin: auto;
-      min-height: 100%;
-      min-width: 100%;
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
     }
   }
 
@@ -75,6 +75,29 @@ const HomePageStyled = styled.main`
           text-align: start;
         }
       }
+
+      &__link {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+
+        & > span {
+          cursor: pointer;
+          font-weight: 600;
+        }
+
+        & > .icon {
+          height: 13px;
+        }
+      }
+    }
+
+    &-projects > .section-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
   }
 `;
