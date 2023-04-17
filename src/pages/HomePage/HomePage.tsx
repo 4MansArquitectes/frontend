@@ -1,6 +1,8 @@
 import OurTeamList from "../../components/OurTeamList/OurTeamList";
+import ProjectList from "../../components/ProjectList/ProjectList";
 import teamMembers from "../../lib/teamMembers";
 import HomePageStyled from "./HomePageStyled";
+import { Link } from "react-router-dom";
 
 const HomePage = (): JSX.Element => (
   <HomePageStyled>
@@ -28,7 +30,13 @@ const HomePage = (): JSX.Element => (
       <div className="section-head">
         <h2 className="section-head__title">Proyectos</h2>
       </div>
-      <div className="section-container" />
+      <div className="section-container">
+        <ProjectList />
+        <Link className="section-container__link" to="/projects">
+          <span className="underline">Ver más</span>
+          <img className="icon icon-arrow--rigth" src="/assets/images/icons/arrowRigth.svg" alt="Icon arrow" />
+        </Link>
+      </div>
     </section>
     <section className="section-services">
       <div className="section-head">
